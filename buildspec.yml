@@ -3,12 +3,11 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
-  build:
+      nodejs: 20
     commands:
-      - echo Building the JAR file...
-      - mvn clean package -DskipTests
+      - npm install
 artifacts:
   files:
-    - target/*.jar
-  discard-paths: yes
+    - app.js
+    - package.json
+    - Procfile
