@@ -5,7 +5,7 @@ const port = process.env.PORT || 8080;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Node.js Pipeline is successfully deploying to AWS!\n');
+  res.end('Node.js Pipeline is successfully deploying to AWS the second time!\n');
 });
 
 server.listen(port, () => {
