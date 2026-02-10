@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  build:
+    commands:
+      - echo Building the JAR file...
+      - mvn clean package -DskipTests
+artifacts:
+  files:
+    - target/*.jar
+  discard-paths: yes
